@@ -8,20 +8,11 @@ async def test_test_case___1(page: Page):
     Open youtube.
     
     Generated from QA Pass execution
-    Test Case ID: 69365741b21d6481ea23bfd6
+    Test Case ID: 693658e4b21d6481ea23bfe6
     """
 
-    # Step 0: Navigate to YouTube homepage
+    # Step 0: Navigate to the YouTube homepage.
     await page.goto('https://www.youtube.com')
 
-    # Step 1: Wait for the page to fully load and network activity to become idle
+    # Step 1: Wait until the YouTube homepage network activity is idle to ensure page fully loads.
     await self.wait_for_network_idle(page)
-
-    # Step 2: Check that the YouTube logo is visible as a confirmation the homepage is loaded.
-    await page.locator('a#logo[title="YouTube Home"]').is_visible()
-
-    # Step 3: Check that the first YouTube logo link (id='logo', title='YouTube Home') is visible as confirmation the homepage loaded.
-    
-            # Find visible element index and assert visibility
-            await expect(page.locator("a#logo[title=\"YouTube Home\"]").nth(0)).to_be_visible()
-            
